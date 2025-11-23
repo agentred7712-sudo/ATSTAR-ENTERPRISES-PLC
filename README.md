@@ -201,9 +201,10 @@
       <aside class="card-stats reveal" id="hero-right" aria-labelledby="stats">
         <h3 id="stats">Quick snapshot</h3>
         <div class="stat"><span class="muted">Years</span><b>5+</b></div>
-        <div class="stat"><span class="muted">Projects Delivered</span><b>42</b></div>
-        <div class="stat"><span class="muted">Active Clients</span><b>16</b></div>
+        <div class="stat"><span class="muted">Projects Delivered</span><b>50</b></div>
+        <div class="stat"><span class="muted">Active Clients</span><b>22000</b></div>
         <div class="stat"><span class="muted">Avg. Uptime</span><b>99.7%</b></div>
+        <div class="stat"><span class="muted">Clients ever visited</span><b>122000</b></div>
 
         <hr style="border:none;border-top:1px solid rgba(0,0,0,0.04);margin:12px 0">
         <h4 style="margin:6px 0">Get a quick plan</h4>
@@ -388,7 +389,7 @@
           <input id="email" type="email" required placeholder="you@example.com">
 
           <label for="phone">Phone (optional)</label>
-          <input id="phone" type="tel" placeholder="+234 800 000 0000">
+          <input id="phone" type="tel" placeholder="+234 830999178">
 
           <label for="service">Service</label>
           <select id="service">
