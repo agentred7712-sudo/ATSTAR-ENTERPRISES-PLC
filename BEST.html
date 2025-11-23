@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ATSTAR Enterprises — Smart Tech & Automation</title>
+  <meta name="description" content="ATSTAR Enterprises — autonomous systems, IoT, robotics, web & AI solutions. Building the future with African innovation." />
+  <meta name="author" content="ATSTAR" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2216%22 fill=%22%2300acc1%22/><text x=%2250%22 y=%2258%22 font-size=%2248%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Arial%22>★</text></svg>">
+  <!-- Open Graph -->
+  <meta property="og:title" content="ATSTAR Enterprises — Smart Tech & Automation" />
+  <meta property="og:description" content="Autonomous systems, IoT, robotics, web & AI solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1200&q=80" />
+  <!-- Structured data (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"ATSTAR Enterprises",
+    "url":"https://example.com",
+    "logo":"https://images.unsplash.com/photo-1545235627-269e4d20f5d8?w=200&q=80",
+    "sameAs":["https://x.com/atstar","https://facebook.com/atstar"]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#f6feff;
+      --muted:#6b7c7a;
+      --brand:#00acc1;
+      --dark:#00363a;
+      --card:#e8fbfd;
+      --glass: rgba(255,255,255,0.7);
+      --radius:14px;
+      --maxw:1200px;
+      --accent:#00e5ff;
+      --shadow: 0 8px 30px rgba(0,0,0,0.08);
+      --ease:cubic-bezier(.2,.9,.3,1);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg), #eafff9 80%);
+      color:var(--dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* Layout */
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px}
+    header.site-header{
+      position:sticky;top:0;z-index:60;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.35));
+      border-bottom:1px solid rgba(0,0,0,0.03);
+    }
+    .nav{
+      display:flex;gap:16px;align-items:center;justify-content:space-between;padding:12px 0;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#007c91);
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px;box-shadow:var(--shadow)
+    }
+    .brand h1{font-size:18px;margin:0}
+    nav.links{display:flex;gap:10px;align-items:center}
+    nav.links a{color:var(--dark);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+    nav.links a:hover{background:rgba(0,172,193,0.08);transform:translateY(-1px);transition:all .18s var(--ease)}
+    .cta{background:var(--brand);color:white;padding:8px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+    .cta:hover{filter:brightness(.98)}
+    /* Hero */
+    .hero{
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0;
+    }
+    .hero-card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.6));
+      border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);
+    }
+    .hero h2{font-size:34px;margin:0 0 12px;color:var(--dark)}
+    .hero p{color:var(--muted);margin-bottom:18px}
+    .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn-primary{background:var(--brand);color:white}
+    .btn-ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--dark)}
+    /* Features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .feature{background:var(--card);padding:18px;border-radius:12px}
+    .feature h4{margin:8px 0 4px}
+    .feature p{color:var(--muted);font-size:14px}
+    /* Right column (quick stats / form) */
+    .card-stats{background:linear-gradient(135deg, rgba(0,172,193,0.06), rgba(0,172,193,0.02));padding:18px;border-radius:12px}
+    .stat{display:flex;justify-content:space-between;align-items:center;margin:10px 0}
+    .stat b{font-size:18px}
+    /* Services / Projects */
+    .section{padding:36px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service, .project{background:white;border-radius:12px;padding:18px;box-shadow:var(--shadow)}
+    .service img.card-thumb{width:100%;height:120px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+    .project img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    /* Testimonials */
+    .testimonials{display:flex;gap:12px;flex-wrap:wrap}
+    .quote{flex:1 1 300px;background:linear-gradient(180deg,#ffffff,#f1feff);padding:16px;border-radius:12px;border-left:4px solid var(--brand)}
+    /* Blog */
+    .blog-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .post{background:white;padding:16px;border-radius:12px;box-shadow:var(--shadow)}
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    form.card{background:white;padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    label{font-weight:600;display:block;margin:8px 0 6px}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e7f8f8;background:transparent}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    /* Footer */
+    footer{margin-top:28px;padding:28px 0;background:linear-gradient(180deg,#00363a,#002a2a);color:white}
+    footer .foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-items:start}
+    footer a{color:var(--accent);text-decoration:none}
+    /* Responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .blog-list{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      footer .foot-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:600px){
+      nav.links{display:none}
+      .brand h1{font-size:16px}
+      .hero h2{font-size:26px}
+      .features{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+
+    /* Subtle animations */
+    .reveal{transform:translateY(10px);opacity:0;transition:all .6s var(--ease)}
+    .reveal.visible{transform:none;opacity:1}
+    .fade{opacity:0;transition:opacity .5s var(--ease)}
+    .fade.visible{opacity:1}
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .kpi{font-size:28px;font-weight:800;color:var(--dark)}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(0,172,193,0.08);font-weight:700}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container nav" aria-label="Main navigation">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">★</div>
+        <div>
+          <h1 style="margin:0;font-size:16px">ATSTAR ENTERPRISES</h1>
+          <div style="font-size:12px;color:var(--muted)">Autonomous Tech • IoT • AI</div>
+        </div>
+      </div>
+
+      <nav class="links" role="navigation" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="top" role="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card reveal" id="hero-left">
+        <div class="chip" aria-hidden="true">Trusted • Scalable • Secure</div>
+        <h2>We build autonomous systems that work anywhere — from labs to cities.</h2>
+        <p class="muted">Software, robotics, IoT, and smart energy solutions designed and deployed with African conditions in mind.</p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Request a Quote</a>
+          <a class="btn btn-ghost" href="#projects">See Projects</a>
+        </div>
+
+        <div class="features" style="margin-top:20px">
+          <div class="feature">
+            <strong>Edge AI</strong>
+            <p>Real-time inference on low-power devices for fast decisions.</p>
+          </div>
+          <div class="feature">
+            <strong>Robotics</strong>
+            <p>Autonomous navigation, object detection & control systems.</p>
+          </div>
+          <div class="feature">
+            <strong>Smart Power</strong>
+            <p>Solar-integrated monitoring and adaptive load management.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card-stats reveal" id="hero-right" aria-labelledby="stats">
+        <h3 id="stats">Quick snapshot</h3>
+        <div class="stat"><span class="muted">Years</span><b>5+</b></div>
+        <div class="stat"><span class="muted">Projects Delivered</span><b>42</b></div>
+        <div class="stat"><span class="muted">Active Clients</span><b>16</b></div>
+        <div class="stat"><span class="muted">Avg. Uptime</span><b>99.7%</b></div>
+
+        <hr style="border:none;border-top:1px solid rgba(0,0,0,0.04);margin:12px 0">
+        <h4 style="margin:6px 0">Get a quick plan</h4>
+        <form id="quick-plan" aria-label="Quick plan form" onsubmit="event.preventDefault(); requestPlan()">
+          <label for="qp-name">Name</label>
+          <input id="qp-name" required placeholder="Your name">
+          <label for="qp-email">Email</label>
+          <input id="qp-email" type="email" required placeholder="you@example.com">
+          <label for="qp-type">Project type</label>
+          <select id="qp-type">
+            <option>IoT Monitoring</option>
+            <option>Smart Home</option>
+            <option>Autonomous Robot</option>
+            <option>Web & Mobile App</option>
+          </select>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <button class="btn btn-primary" type="submit">Request Plan</button>
+            <button class="btn btn-ghost" type="button" onclick="showToast('Saved template')">Save</button>
+          </div>
+        </form>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <h2>About ATSTAR</h2>
+      <p class="muted">We are a multidisciplinary team focused on building resilient, easy-to-maintain autonomous systems. We blend hardware, firmware, cloud services and human-centered UX.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px">
+        <div class="hero-card">
+          <h3>Our Mission</h3>
+          <p class="muted">Deliver affordable, localised technology that improves efficiency, safety and sustainability across African industries.</p>
+          <ul style="margin-top:12px;color:var(--muted)">
+            <li>Localized support and training</li>
+            <li>Robust design for heat, dust, and intermittent power</li>
+            <li>Open standards and clear documentation</li>
+          </ul>
+        </div>
+
+        <div class="hero-card">
+          <h3>Team & Culture</h3>
+          <p class="muted">Small teams, high ownership — engineers, designers, and energy specialists working cross-discipline to ship quickly and safely.</p>
+          <div style="display:flex;gap:10px;margin-top:12px;align-items:center">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=60" alt="Team avatar" style="width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#007c91)"/>
+            <div>
+              <strong>Atstar</strong>
+              <div class="muted" style="font-size:13px">Founder & Lead Engineer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section reveal">
+      <h2>Services</h2>
+      <p class="muted">From prototype to production — all stages covered.</p>
+      <div class="grid" style="margin-top:18px">
+        <div class="service">
+          <img class="card-thumb" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=60" alt="Custom software"/>
+          <h4>Custom Software</h4>
+          <p class="muted">Backends, mobile apps, dashboards and APIs built for scale.</p>
+          <ul class="muted">
+            <li>Node / Python / C++</li>
+            <li>Cloud-native deployments</li>
+            <li>Secure auth & monitoring</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <img class="card-thumb" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=60" alt="Embedded firmware"/>
+          <h4>Embedded & Firmware</h4>
+          <p class="muted">Energy-efficient code for MCUs, OTA updates & hardware integration.</p>
+        </div>
+
+        <div class="service">
+          <img class="card-thumb" src="https://th.bing.com/th/id/OIP.CIihxQgaZ3gp_cFQuNjG9wHaE8?w=236&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="IoT & Edge AI"/>
+          <h4>IoT & Edge AI</h4>
+          <p class="muted">Sensors, gateways, low-latency models and fleet management.</p>
+        </div>
+
+        <div class="service">
+          <img class="card-thumb" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1200&q=60" alt="Robotics"/>
+          <h4>Robotics</h4>
+          <p class="muted">Perception, path planning, and motor control for field robots.</p>
+        </div>
+
+        <div class="service">
+          <img class="card-thumb" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=60" alt="Smart Energy"/>
+          <h4>Smart Energy</h4>
+          <p class="muted">Solar monitoring, battery management, and demand-side automation.</p>
+        </div>
+
+        <div class="service">
+          <img class="card-thumb" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&q=60" alt="Consulting"/>
+          <h4>Consulting & Training</h4>
+          <p class="muted">Workshops, handover docs and capacity building for teams.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section reveal">
+      <h2>Selected Projects</h2>
+      <p class="muted">Real projects with measurable impact.</p>
+
+      <div class="grid" style="margin-top:18px">
+        <article class="project" aria-labelledby="p1">
+          <img data-src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1200&q=60" alt="Smart home control" class="lazy">
+          <h4 id="p1">Smart Home Automation</h4>
+          <p class="muted">Centralized controller, voice & mobile control, offline-first logic, and low-power nodes.</p>
+        </article>
+
+        <article class="project" aria-labelledby="p2">
+          <img data-src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=60" alt="Autonomous robot" class="lazy">
+          <h4 id="p2">Autonomous Obstacle-Avoiding Robot</h4>
+          <p class="muted">LiDAR + vision stack, custom motor controllers and cloud fleet dashboard.</p>
+        </article>
+
+        <article class="project" aria-labelledby="p3">
+          <img data-src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1200&q=60" alt="Solar monitoring" class="lazy">
+          <h4 id="p3">Solar Monitoring Platform</h4>
+          <p class="muted">Low-cost RTU devices, MQTT gateway, forecasting & alerts for rural sites.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section reveal">
+      <h2>Client Feedback</h2>
+      <div class="testimonials" style="margin-top:12px">
+        <blockquote class="quote">
+          <strong>“Efficiency increased 40%”</strong>
+          <p class="muted">ATSTAR deployed an automation stack that reduced downtime and simplified maintenance. — <b>Global Tech Ltd</b></p>
+        </blockquote>
+        <blockquote class="quote">
+          <strong>“Local team, global standards”</strong>
+          <p class="muted">Fast, professional, and adaptable to local constraints. — <b>Green Energy Africa</b></p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section reveal">
+      <h2>From the Lab</h2>
+      <p class="muted">Short reads about tools, field lessons and how-tos.</p>
+
+      <div class="blog-list" style="margin-top:12px">
+        <article class="post">
+          <h4>Designing for African Power Constraints</h4>
+          <p class="muted">Best practices for building devices that survive brownouts and heat.</p>
+        </article>
+
+        <article class="post">
+          <h4>Edge ML: Tiny Models That Matter</h4>
+          <p class="muted">Practical tips to deploy models on microcontrollers.</p>
+        </article>
+
+        <article class="post">
+          <h4>Solar Data: What To Monitor</h4>
+          <p class="muted">Which metrics give the fastest ROI for solar systems.</p>
+        </article>
+
+        <article class="post">
+          <h4>Robotics Field-Test Checklist</h4>
+          <p class="muted">A checklist to make your field deployment safer and faster.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <h2>Contact & Inquiries</h2>
+      <p class="muted">Tell us about your idea. We'll reply within 2 business days.</p>
+
+      <div class="contact-grid" style="margin-top:18px">
+        <form class="card" id="contact-form" onsubmit="event.preventDefault(); submitContact()" aria-label="Contact form">
+          <label for="name">Full name</label>
+          <input id="name" type="text" required placeholder="Your full name">
+
+          <label for="email">Email</label>
+          <input id="email" type="email" required placeholder="you@example.com">
+
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" type="tel" placeholder="+234 800 000 0000">
+
+          <label for="service">Service</label>
+          <select id="service">
+            <option>IoT Solution</option>
+            <option>Robotics</option>
+            <option>Web & Mobile</option>
+            <option>Consulting</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Tell us about your project..."></textarea>
+
+          <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <button class="btn btn-ghost" type="button" onclick="resetForm()">Reset</button>
+          </div>
+        </form>
+
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div class="hero-card">
+            <h4>Office</h4>
+            <p class="muted">Abuja, Nigeria — remote-friendly</p>
+            <p class="muted">Email: <a href="mailto:atstar.tech@gmail.com">atstar.tech@gmail.com</a></p>
+            <p class="muted">Phone: +234 800 000 0000</p>
+          </div>
+
+          <div class="hero-card">
+            <h4>Newsletter</h4>
+            <p class="muted">Short monthly updates. No spam.</p>
+            <form id="newsletter" onsubmit="event.preventDefault(); subscribeNewsletter()">
+              <label for="n-email" class="sr-only">Email</label>
+              <input id="n-email" type="email" placeholder="you@example.com" required>
+              <div style="margin-top:8px">
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="hero-card">
+            <h4>Follow</h4>
+            <p class="muted">X • Facebook • Instagram</p>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <a class="btn-ghost" href="#" style="padding:8px 10px">X</a>
+              <a class="btn-ghost" href="#" style="padding:8px 10px">FB</a>
+              <a class="btn-ghost" href="#" style="padding:8px 10px">IG</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container foot-grid">
+      <div>
+        <h4 style="margin:0 0 6px">ATSTAR ENTERPRISES</h4>
+        <p class="muted" style="max-width:300px">Autonomous tech, IoT, robotics and smart energy built for real-world conditions.</p>
+      </div>
+      <div>
+        <h5 style="margin-bottom:8px">Quick Links</h5>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h5 style="margin-bottom:8px">Legal</h5>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookie</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:18px;color:rgba(255,255,255,0.65)">
+      © <span id="year"></span> ATSTAR ENTERPRISES — All Rights Reserved
+    </div>
+  </footer>
+
+  <!-- Toast / Modal elements -->
+  <div id="toast" aria-hidden="true" style="position:fixed;right:20px;bottom:20px;background:#00363a;color:white;padding:12px 16px;border-radius:10px;box-shadow:var(--shadow);opacity:0;transform:translateY(12px);transition:all .3s var(--ease)"></div>
+
+  <script>
+    // small helpers
+    const toastEl = document.getElementById('toast');
+    function showToast(msg, time=2500){
+      toastEl.textContent = msg;
+      toastEl.style.opacity = '1';
+      toastEl.style.transform = 'none';
+      toastEl.setAttribute('aria-hidden','false');
+      setTimeout(()=>{ toastEl.style.opacity = '0'; toastEl.style.transform = 'translateY(12px)'; toastEl.setAttribute('aria-hidden','true'); }, time);
+    }
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, {threshold: 0.12});
+    reveals.forEach(r=>io.observe(r));
+
+    // Lazy load images
+    const lazyImgs = document.querySelectorAll('img.lazy');
+    const ioImg = new IntersectionObserver((entries,observer)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const img = entry.target;
+          const src = img.getAttribute('data-src');
+          if(src){ img.src = src; img.removeAttribute('data-src'); }
+          observer.unobserve(img);
+        }
+      });
+    }, {rootMargin:'200px'});
+    lazyImgs.forEach(img=>ioImg.observe(img));
+
+    // Quick plan handler
+    function requestPlan(){
+      const name = document.getElementById('qp-name').value || 'Friend';
+      showToast('Thanks ' + name + ', we received your plan request.');
+      // in real product: post to API here
+      document.getElementById('quick-plan').reset();
+    }
+
+    // Contact submit
+    function submitContact(){
+      const n = document.getElementById('name').value.trim();
+      const e = document.getElementById('email').value.trim();
+      if(!n || !e){ showToast('Please fill required fields.'); return; }
+      showToast('Message sent — we will reply soon.');
+      document.getElementById('contact-form').reset();
+    }
+    function resetForm(){ document.getElementById('contact-form').reset(); showToast('Form cleared'); }
+
+    // Newsletter
+    function subscribeNewsletter(){
+      const em = document.getElementById('n-email').value;
+      if(!em){ showToast('Provide an email'); return; }
+      // store locally (demo)
+      const list = JSON.parse(localStorage.getItem('ns')||'[]');
+      if(list.includes(em)){ showToast('Already subscribed'); return; }
+      list.push(em); localStorage.setItem('ns', JSON.stringify(list));
+      showToast('Thanks — check your inbox to confirm.');
+      document.getElementById('newsletter').reset();
+    }
+
+    // Keyboard accessibility: skip to content
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'k' && (e.ctrlKey || e.metaKey)){
+        document.getElementById('contact-form').querySelector('input')?.focus();
+      }
+    });
+
+    // Basic client-side form validation example for the contact email
+    document.getElementById('contact-form').addEventListener('input', (ev)=>{
+      if(ev.target.id==='email'){
+        const ok = /\S+@\S+\.\S+/.test(ev.target.value);
+        ev.target.style.borderColor = ok ? 'rgba(0,172,193,0.5)' : '#f4aaaa';
+      }
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
